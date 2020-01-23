@@ -15,13 +15,22 @@ function translate(sentence) {
         return sentence + "way";
       }
     };
-  
     var firstVowelIndex = findFirstVowel(sentence, vowels);
-    var sentenceArr = sentence.split("");
-    var firstConsonants = sentenceArr.splice(0, firstVowelIndex);
-    var newSentence = sentence.slice(firstVowelIndex, sentence.length) + firstConsonants.join("") + "ay";
-    return newSentence;
-    
+    if((sentence[firstVowelIndex] === "u") && (sentence[firstVowelIndex - 1] === "q")) {
+      // firstConsonants += "qu";
+      var sentenceArr = sentence.split("");
+      var firstConsonants = sentenceArr.splice(0, firstVowelIndex + 1);
+      console.log(firstConsonants);
+      var newSentence = sentence.slice(firstVowelIndex + 1, sentence.length) + firstConsonants.join("") + "ay";
+      return newSentence;
+    } else {
+      var sentenceArr = sentence.split("");
+      var firstConsonants = sentenceArr.splice(0, firstVowelIndex);
+      
+      console.log(firstConsonants);
+      var newSentence = sentence.slice(firstVowelIndex, sentence.length) + firstConsonants.join("") + "ay";
+      return newSentence;
+    }
   } else {
     return "error";
   }
