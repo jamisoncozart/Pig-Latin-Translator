@@ -8,7 +8,7 @@
 
 _Pig-Latin translator which takes a user input sentence and translates all words in the sentence into Pig-Latin syntax. Uses string methods and array looping to translate the words._
 
-_You can checkout the live page [here]("https://jamisoncozart.github.io/Pig-Latin-Translator/")_
+_You can checkout the live page [here](https://jamisoncozart.github.io/Pig-Latin-Translator/)_
 
 ## Setup/Installation Requirements
 
