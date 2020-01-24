@@ -12,7 +12,7 @@ _Pig-Latin translator which takes a user input sentence and translates all words
 
 1. Clone the repository into preferred directory:
     ```
-    git clone https://github.com/
+    git clone https://github.com/jamisoncozart/Pig-Latin-Translator
     ```
 2. Open working directory in Visual Studio Code or preferred text editor:
     ```
