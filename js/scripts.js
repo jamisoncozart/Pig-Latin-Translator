@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $("form#form").submit(function(event) {
     event.preventDefault();
+    $("#outputDiv").show();
     var sentence = $("#sentence").val();
     var wordArr = sentence.split(" ");
     //call translate() function on each word in the user input sentence

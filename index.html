@@ -12,12 +12,17 @@
 </head>
 <body>
   <div class="container">
-    <h1>Enter a word and the will translate it to Pig-Latin!</h1>
-    <form id="form">
-      <input type="text" id="sentence">
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-    <div class="output"></div>
+    <div class="panel">
+      <h1>Translate any text into Pig Latin!</h1>
+      <form id="form">
+        <textarea type="text" id="sentence" cols="40" rows="5"></textarea>
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+      </form>
+    </div>
+    
+    <div id="outputDiv" class="panel">
+      <p class="output"></p>
+    </div>
   </div>
 </body>
 </html>
