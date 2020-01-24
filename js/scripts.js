@@ -3,49 +3,57 @@ $(document).ready(function() {
     event.preventDefault();
     var sentence = $("#sentence").val();
     var wordArr = sentence.split(" ");
+    //call translate() function on each word in the user input sentence
     for(var i = 0; i < wordArr.length; i++) {
       $(".output").append(" " + translate(wordArr[i]));
     }
   });
 });
 
-function translate(sentence) {
-  var vowels = ["a", "e", "i", "o", "u"];
-  if(sentence) {
+//Translates 1 word into pig-latin
+function translate(word) {
+  var vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+  if(word) {
+    //Check if the first character of a word is a vowel
     for(var i = 0; i < vowels.length; i++) {
-      if(sentence[0] === vowels[i]) {
-        // console.log("in if");
-        return sentence + "way";
+      if(word[0] === vowels[i]) {
+        return word + "way";
       }
     };
-    // console.log(findFirstVowel(sentence, vowels));
-    if(findFirstVowel(sentence, vowels) === 0 || findFirstVowel(sentence, vowels)) {
-      var firstVowelIndex = findFirstVowel(sentence, vowels);
-      // console.log("in if");
-      if((sentence[firstVowelIndex] === "u") && (sentence[firstVowelIndex - 1] === "q")) {
-        var sentenceArr = sentence.split("");
+    if(findFirstVowel(word, vowels) === 0 || findFirstVowel(word, vowels)) {
+      var firstVowelIndex = findFirstVowel(word, vowels);
+      //If "u" is the first vowel found in the word, check if "q" precedes it
+      if((word[firstVowelIndex] === "u") && (word[firstVowelIndex - 1] === "q")) {
+        var sentenceArr = word.split("");
         var firstConsonants = sentenceArr.splice(0, firstVowelIndex + 1);
-        // console.log(firstConsonants);
-        var newSentence = sentence.slice(firstVowelIndex + 1, sentence.length) + firstConsonants.join("") + "ay";
+        var newSentence = word.slice(firstVowelIndex + 1, word.length) + firstConsonants.join("") + "ay";
         return newSentence;
       } else {
-        var sentenceArr = sentence.split("");
+        var sentenceArr = word.split("");
+        //splice out the consonants before the index of the first vowel in the word
         var firstConsonants = sentenceArr.splice(0, firstVowelIndex);
-        // console.log(firstConsonants);
-        var newSentence = sentence.slice(firstVowelIndex, sentence.length) + firstConsonants.join("") + "ay";
+        var newSentence = word.slice(firstVowelIndex, word.length) + firstConsonants.join("") + "ay";
         return newSentence;
       } 
     } else {
-      // console.log("in else");
-      return sentence;
+      //Check for numbers in word, if no numbers, concatenate "ay" at the end of the word
+      var numArray = ["0","1","2","3","4","5","6","7","8","9"];
+      for(var i = 0; i < word.length; i++) {
+        if(!(numArray.includes(word[i]))) {
+          return word + "ay";
+        } 
+      }
+      return word;
     }
   }
+  //If user doesn't input anything return "error"
   return "error";
 }
 
-function findFirstVowel(sentence, vowels) {
-  for(var i = 0; i < sentence.length; i++) {
-    if(vowels.includes(sentence[i])) {
+//returns the index of the first vowel in a word or if no vowels, return false
+function findFirstVowel(word, vowels) {
+  for(var i = 0; i < word.length; i++) {
+    if(vowels.includes(word[i])) {
       return i;
     } 
   };
