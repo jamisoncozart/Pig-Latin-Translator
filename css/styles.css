@@ -54,9 +54,25 @@ form button {
   padding: 20px;
 }
 
+h2 {
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+
 p.output {
   font-size: 20px;
   padding: 20px;
-  background-color: #eee;
+  background-color: #fff;
   border-radius: 10px;
+}
+
+footer {
+  width: 100%;
+  color: #000;
+  background-color: #ddd;
+  padding: 20px;
+  font-size: 15px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }
