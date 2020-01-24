@@ -1,5 +1,8 @@
 body {
   text-align: center;
+  background-image: url(../img/background.jpg);
+  background-size: fill;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -19,6 +22,7 @@ h1 {
   background-color: #ddd;
   padding: 40px;
   border-radius: 10px;
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.2);
 }
 
 form {
@@ -46,7 +50,13 @@ form button {
 #outputDiv {
   display: none;
 }
+#outputDiv .panel {
+  padding: 20px;
+}
 
 p.output {
   font-size: 20px;
+  padding: 20px;
+  background-color: #eee;
+  border-radius: 10px;
 }

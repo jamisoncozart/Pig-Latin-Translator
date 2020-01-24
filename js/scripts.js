@@ -4,10 +4,12 @@ $(document).ready(function() {
     $("#outputDiv").show();
     var sentence = $("#sentence").val();
     var wordArr = sentence.split(" ");
+    var translatedSentence = "";
     //call translate() function on each word in the user input sentence
     for(var i = 0; i < wordArr.length; i++) {
-      $(".output").append(" " + translate(wordArr[i]));
+      translatedSentence += translate(wordArr[i]) + " ";
     }
+    $(".output").text(translatedSentence);
   });
 });
 
