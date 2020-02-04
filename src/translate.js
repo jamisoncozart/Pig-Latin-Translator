@@ -1,7 +1,7 @@
 //Translates 1 word into pig-latin
 export function translate(word) {
   var vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
-//   if(word) {
+  if(word) {
 //     //Check if the first character of a word is a vowel
     for(var i = 0; i < vowels.length; i++) {
       if(word[0] === vowels[i]) {
@@ -15,9 +15,9 @@ export function translate(word) {
       var newSentence;
 //       //If "u" is the first vowel found in the word, check if "q" precedes it
       if((word[firstVowelIndex] === "u") && (word[firstVowelIndex - 1] === "q")) {
-//         firstConsonants = sentenceArr.splice(0, firstVowelIndex + 1);
-//         newSentence = word.slice(firstVowelIndex + 1, word.length) + firstConsonants.join("") + "ay";
-//         return newSentence;
+        firstConsonants = sentenceArr.splice(0, firstVowelIndex + 1);
+        newSentence = word.slice(firstVowelIndex + 1, word.length) + firstConsonants.join("") + "ay";
+        return newSentence;
       } else {
         //splice out the consonants before the index of the first vowel in the word
         firstConsonants = sentenceArr.splice(0, firstVowelIndex);
@@ -35,9 +35,10 @@ export function translate(word) {
       
       return word.toString();
     }
-//   }
   //If user doesn't input anything return "error"
-  return "error";
+  } else {
+    return "error";
+  }
 }
 
 //returns the index of the first vowel in a word or if no vowels, return false
