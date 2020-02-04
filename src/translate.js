@@ -1,20 +1,5 @@
-$(document).ready(function() {
-  $("form#form").submit(function(event) {
-    event.preventDefault();
-    $("#outputDiv").show();
-    var sentence = $("#sentence").val();
-    var wordArr = sentence.split(" ");
-    var translatedSentence = "";
-    //call translate() function on each word in the user input sentence
-    for(var i = 0; i < wordArr.length; i++) {
-      translatedSentence += translate(wordArr[i]) + " ";
-    }
-    $(".output").text(translatedSentence);
-  });
-});
-
 //Translates 1 word into pig-latin
-function translate(word) {
+export function translate(word) {
   var vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
   if(word) {
     //Check if the first character of a word is a vowel
@@ -54,7 +39,7 @@ function translate(word) {
 }
 
 //returns the index of the first vowel in a word or if no vowels, return false
-function findFirstVowel(word, vowels) {
+export function findFirstVowel(word, vowels) {
   for(var i = 0; i < word.length; i++) {
     if(vowels.includes(word[i])) {
       return i;
