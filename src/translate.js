@@ -7,20 +7,21 @@ export function translate(word) {
       if(word[0] === vowels[i]) {
         return word + "way";
       }
-    };
+    }
     if(findFirstVowel(word, vowels) === 0 || findFirstVowel(word, vowels)) {
       var firstVowelIndex = findFirstVowel(word, vowels);
+      var sentenceArr = word.split("");
+      var firstConsonants;
+      var newSentence;
       //If "u" is the first vowel found in the word, check if "q" precedes it
       if((word[firstVowelIndex] === "u") && (word[firstVowelIndex - 1] === "q")) {
-        var sentenceArr = word.split("");
-        var firstConsonants = sentenceArr.splice(0, firstVowelIndex + 1);
-        var newSentence = word.slice(firstVowelIndex + 1, word.length) + firstConsonants.join("") + "ay";
+        firstConsonants = sentenceArr.splice(0, firstVowelIndex + 1);
+        newSentence = word.slice(firstVowelIndex + 1, word.length) + firstConsonants.join("") + "ay";
         return newSentence;
       } else {
-        var sentenceArr = word.split("");
         //splice out the consonants before the index of the first vowel in the word
-        var firstConsonants = sentenceArr.splice(0, firstVowelIndex);
-        var newSentence = word.slice(firstVowelIndex, word.length) + firstConsonants.join("") + "ay";
+        firstConsonants = sentenceArr.splice(0, firstVowelIndex);
+        newSentence = word.slice(firstVowelIndex, word.length) + firstConsonants.join("") + "ay";
         return newSentence;
       } 
     } else {
@@ -44,6 +45,6 @@ function findFirstVowel(word, vowels) {
     if(vowels.includes(word[i])) {
       return i;
     } 
-  };
+  }
   return false;
 }
