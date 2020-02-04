@@ -1,13 +1,13 @@
 //Translates 1 word into pig-latin
 export function translate(word) {
-//   var vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+  var vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
 //   if(word) {
 //     //Check if the first character of a word is a vowel
-//     for(var i = 0; i < vowels.length; i++) {
-//       if(word[0] === vowels[i]) {
-//         return word + "way";
-//       }
-//     }
+    for(var i = 0; i < vowels.length; i++) {
+      if(word[0] === vowels[i]) {
+        return word + "way";
+      }
+    }
 //     if(findFirstVowel(word, vowels) === 0 || findFirstVowel(word, vowels)) {
 //       var firstVowelIndex = findFirstVowel(word, vowels);
 //       var sentenceArr = word.split("");
@@ -41,11 +41,11 @@ export function translate(word) {
 }
 
 //returns the index of the first vowel in a word or if no vowels, return false
-function findFirstVowel(word, vowels) {
-  for(var i = 0; i < word.length; i++) {
-    if(vowels.includes(word[i])) {
-      return i;
-    } 
-  }
-  return false;
-}
+// function findFirstVowel(word, vowels) {
+//   for(var i = 0; i < word.length; i++) {
+//     if(vowels.includes(word[i])) {
+//       return i;
+//     } 
+//   }
+//   return false;
+// }
