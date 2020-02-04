@@ -1,0 +1,24 @@
+{
+  "name": "Pig-Latin-Translator",
+  "version": "1.0.0",
+  "description": "Site to translate any sentence into Pig-Latin, 23 January 2020",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamisoncozart/Pig-Latin-Translator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamisoncozart/Pig-Latin-Translator/issues"
+  },
+  "homepage": "https://github.com/jamisoncozart/Pig-Latin-Translator#readme",
+  "devDependencies": {
+    "webpack": "4.39.3",
+    "webpack-cli": "^3.3.8"
+  }
+}

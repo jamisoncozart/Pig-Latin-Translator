@@ -34,6 +34,10 @@ _You can checkout the live page [here](https://jamisoncozart.github.io/Pig-Latin
 | If user inputs a word starting with a consonant followed by "qu", move all consonants and "qu" to the end and add "ay" | "squeal"    | "ealsquay" |
 | If user inputs a word starting with no vowels add "ay" to the end of the word | "shy"    | "shyay" |
 
+## Troubleshooting Node
+
+https://github.com/nodejs/help/issues/1941
+
 ## Technologies Used
 
 * HTML
