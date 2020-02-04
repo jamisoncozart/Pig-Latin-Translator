@@ -1,6 +1,6 @@
 //Translates 1 word into pig-latin
 export function translate(word) {
-  var vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+  var vowels = ["a", "e", "i", "o", "u", "y", "A", "E", "I", "O", "U", "Y"];
 //   if(word) {
 //     //Check if the first character of a word is a vowel
     for(var i = 0; i < vowels.length; i++) {

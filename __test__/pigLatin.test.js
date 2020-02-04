@@ -10,4 +10,7 @@ describe('Translator', () => {
   test('should take starting consonants and move them to the end of the word and add "ay" if the word starts with a consonant', () => {
     expect(translate("char")).toEqual("archay");
   })
+  test('should treat "y" as a consonant if it is at the beginning of the word', () => {
+    expect(translate("yes")).toEqual("esyay");
+  })
 })
