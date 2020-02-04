@@ -1,4 +1,4 @@
-import { translate } from "./translate.js"
+import { translate } from "./translate.js";
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';

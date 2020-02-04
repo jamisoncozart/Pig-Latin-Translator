@@ -16,4 +16,7 @@ describe('Translator', () => {
   test('should treat qu as consonants if they are at the beginning of the word', () => {
     expect(translate("queue")).toEqual("euequay");
   })
+  test('should add "ay" to the end of a word that has no vowels', () => {
+    expect(translate("shy")).toEqual("shyay");
+  })
 })

@@ -2,7 +2,7 @@
 export function translate(word) {
   var vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
   if(word) {
-//     //Check if the first character of a word is a vowel
+    //Check if the first character of a word is a vowel
     for(var i = 0; i < vowels.length; i++) {
       if(word[0] === vowels[i]) {
         return word + "way";
@@ -13,7 +13,7 @@ export function translate(word) {
       var sentenceArr = word.split("");
       var firstConsonants;
       var newSentence;
-//       //If "u" is the first vowel found in the word, check if "q" precedes it
+      //If "u" is the first vowel found in the word, check if "q" precedes it
       if((word[firstVowelIndex] === "u") && (word[firstVowelIndex - 1] === "q")) {
         firstConsonants = sentenceArr.splice(0, firstVowelIndex + 1);
         newSentence = word.slice(firstVowelIndex + 1, word.length) + firstConsonants.join("") + "ay";
@@ -27,8 +27,8 @@ export function translate(word) {
     } else {
       // Check for numbers in word, if no numbers, concatenate "ay" at the end of the word
       var numArray = ["0","1","2","3","4","5","6","7","8","9"];
-      for(var i = 0; i < word.length; i++) {
-        if(!(numArray.includes(word[i]))) {
+      for(var index = 0; index < word.length; index++) {
+        if(!(numArray.includes(word[index]))) {
           return word + "ay";
         } 
       }
