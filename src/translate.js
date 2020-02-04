@@ -39,7 +39,7 @@ export function translate(word) {
 }
 
 //returns the index of the first vowel in a word or if no vowels, return false
-export function findFirstVowel(word, vowels) {
+function findFirstVowel(word, vowels) {
   for(var i = 0; i < word.length; i++) {
     if(vowels.includes(word[i])) {
       return i;
