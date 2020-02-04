@@ -7,4 +7,7 @@ describe('Translator', () => {
   test('should add "way" to the end of a word that begins with a vowel', () => {
     expect(translate("anchor")).toEqual("anchorway");
   })
+  test('should take starting consonants and move them to the end of the word and add "ay" if the word starts with a consonant', () => {
+    expect(translate("char")).toEqual("archay");
+  })
 })
