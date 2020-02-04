@@ -13,4 +13,7 @@ describe('Translator', () => {
   test('should treat "y" as a consonant if it is at the beginning of the word', () => {
     expect(translate("yes")).toEqual("esyay");
   })
+  test('should treat qu as consonants if they are at the beginning of the word', () => {
+    expect(translate("queue")).toEqual("euequay");
+  })
 })
